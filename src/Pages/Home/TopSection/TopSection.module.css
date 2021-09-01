@@ -1,0 +1,71 @@
+.TopSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.ImageContainer {
+  position: relative;
+  height: 22rem;
+  display: flex;
+  align-items: center;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+}
+
+.About {
+  z-index: 2;
+  padding: 2rem;
+  background-color: #333333;
+  font-size: 0.8rem;
+}
+
+.Role {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.Name {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.AboutMe {
+  line-height: 1.6rem;
+}
+
+@media screen and (min-width: 700px) {
+  .TopSection {
+    flex-direction: row;
+  }
+
+  .TopSection > div {
+    flex: 1;
+  }
+
+  .ImageContainer {
+    height: 35rem;
+  }
+
+  .Image {
+    position: relative;
+    left: 6rem;
+  }
+
+  .AboutContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .About {
+    width: 50%;
+    min-width: 18rem;
+    box-shadow: 0px 6px 12px 0.4px black;
+  }
+}

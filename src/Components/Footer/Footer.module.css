@@ -1,0 +1,39 @@
+.Footer {
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #222222;
+}
+
+.SocialLinks {
+  flex: 1;
+  display: flex;
+}
+
+.Link {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #a9a9a9;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.Link:hover {
+  color: #ffffff;
+}
+
+.CopyWrite {
+  font-size: medium;
+}
+
+@media screen and (max-width: 500px) {
+  .Link {
+    margin-right: 1rem;
+    font-size: small;
+  }
+
+  .CopyWrite {
+    font-size: small;
+  }
+}

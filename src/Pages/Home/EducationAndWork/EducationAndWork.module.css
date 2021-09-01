@@ -1,0 +1,60 @@
+.EducationAndWork {
+  display: flex;
+  flex-direction: column;
+}
+
+.Section {
+  margin: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.SectionTitle {
+  margin: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.Header {
+  font-size: 0.64rem;
+  display: flex;
+  align-items: center;
+}
+
+.Chip {
+  padding: 0.2rem 0.4rem;
+  border: 2px solid #007ae9;
+  border-radius: 2rem;
+}
+
+.Name {
+  margin: auto 0.4rem;
+  color: #a0a0a0;
+}
+
+.Title {
+  margin: 0.4rem 0.2rem;
+  font-weight: bolder;
+}
+
+.More {
+  margin: 0.4rem 0.2rem;
+  color: #d1d1d1;
+  font-size: small;
+  line-height: 1.4rem;
+}
+
+@media screen and (min-width: 760px) {
+  .EducationAndWork {
+    flex-direction: row;
+  }
+
+  .EducationAndWork > div {
+    flex: 1;
+    margin: 2rem;
+  }
+
+  .SectionTitle {
+    font-size: x-large;
+  }
+}

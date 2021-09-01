@@ -1,0 +1,5 @@
+.Portfolio {
+  min-height: calc(100vh - 6.5rem);
+  direction: flex;
+  text-align: center;
+}
