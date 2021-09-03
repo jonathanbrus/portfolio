@@ -14,8 +14,8 @@
   bottom: 1rem;
   position: absolute;
   z-index: 2;
-  padding: 0.4rem 0.8rem;
-  font-size: smaller;
+  padding: 0.3rem 0.6rem;
+  font-size: x-small;
   background-color: #222222;
   border-radius: 0.4rem;
 }
@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1rem;
   transition: all ease-in-out 400ms;
 }
@@ -49,7 +49,7 @@
 
 .Chip {
   margin: 0.2rem 0.4rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.12rem 0.6rem;
   font-size: x-small;
   border: 2px solid #dadada;
   border-radius: 0.4rem;
@@ -63,7 +63,7 @@
 
 .Details > a {
   padding: 0.2rem 0.6rem;
-  font-size: smaller;
+  font-size: x-small;
   color: white;
   background-color: black;
   border: 2px solid black;
@@ -87,4 +87,22 @@
 
 .Details > a:hover {
   border: 2px solid #a5a5a5;
+}
+
+@media screen and (min-width: 800px) {
+  .Title {
+    font-size: smaller;
+  }
+
+  .Chip {
+    font-size: smaller;
+  }
+
+  .Description {
+    font-size: medium;
+  }
+
+  .Details > a {
+    font-size: smaller;
+  }
 }
