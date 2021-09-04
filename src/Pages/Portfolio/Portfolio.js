@@ -2,7 +2,7 @@ import React from "react";
 
 import Project from "./project/project";
 
-import { Projects } from "../../projectImages";
+import { Projects } from "../../projects";
 import classes from "./Portfolio.module.css";
 
 const Portfolio = (props) => {

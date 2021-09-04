@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
+import { scrollToView } from "../../../Hooks/scrollToView";
 import classes from "./Skills.module.css";
 
 import {
@@ -17,9 +18,22 @@ import {
 const svgs = [flutter, react, node, dart, js, html, css];
 
 const Skills = (props) => {
+  const setRef = useRef();
+
+  // const scrollToView = () => {
+  //   setRef.current.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "nearest",
+  //     inline: "nearest",
+  //   });
+  // };
+
   return (
     <div className={classes.Skils}>
-      <div className={classes.Header}>
+      <div
+        className={classes.Header}
+        onClick={() => scrollToView({ ref: setRef })}
+      >
         <div>Familiar With</div>
         <motion.div
           initial={{ x: -2 }}
@@ -46,7 +60,11 @@ const Skills = (props) => {
       </div>
       <div className={classes.Container}>
         {svgs.map((svg, i) => (
-          <div key={i} className={classes.Skill}>
+          <div
+            key={i}
+            className={classes.Skill}
+            ref={svgs.length - 1 === i ? setRef : null}
+          >
             <div>{svg}</div>
           </div>
         ))}

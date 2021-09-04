@@ -38,7 +38,7 @@ const Header = (props) => {
               initial={{ rotateX: "90deg" }}
               animate={{ rotateX: "180deg" }}
               exit={{ rotateX: "90deg" }}
-              transition={{ duration: 1.4, ease: "circOut" }}
+              transition={{ duration: 0.6, ease: "circOut" }}
             >
               {close}
             </motion.div>
@@ -49,7 +49,7 @@ const Header = (props) => {
               initial={{ rotateX: "90deg" }}
               animate={{ rotateX: "0deg" }}
               exit={{ rotateX: "90deg" }}
-              transition={{ duration: 1.4, ease: "circOut" }}
+              transition={{ duration: 0.8, ease: "circOut" }}
             >
               {burgerMenu}
             </motion.div>

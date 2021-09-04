@@ -22,6 +22,14 @@ const Footer = (props) => {
         >
           Instagram
         </a>
+        <a
+          href="https://www.linkedin.com/in/jonathan-brus-591a631b7"
+          className={classes.Link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
       </div>
       <div className={classes.CopyWrite}>© 2021 All rights reserved.</div>
     </div>
