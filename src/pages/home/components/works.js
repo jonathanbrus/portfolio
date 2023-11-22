@@ -59,7 +59,9 @@ const JobExperiences = () => {
               <Typography variant="subtitle2" sx={{ color: "grey", my: "0.2rem" }}>
                 {experience.designation}
               </Typography>
-              <Typography variant="body1">{experience.responsibilities}</Typography>
+              <Typography variant="body1" sx={{ mt: "1rem" }}>
+                {experience.responsibilities}
+              </Typography>
             </TimelineContent>
           </TimelineItem>
         );
