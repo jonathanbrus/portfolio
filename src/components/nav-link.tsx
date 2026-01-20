@@ -1,32 +1,21 @@
-import { Box, SxProps, Typography } from "@mui/material";
-import { useRouter, usePathname } from "next/navigation";
+import { SxProps, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 
-export const NavLink: React.FC<{ pathname: string; hash: string; title: string; sx: SxProps }> = ({
-  pathname = "",
-  hash = "",
-  title = "",
-  sx,
-}) => {
-  const router = useRouter();
-  const currentPagePathname = usePathname();
+interface INavLinkProps {
+  title: string;
+  pathname: string;
+  hash: string;
+  sx: SxProps;
+}
 
-  const handleNavigate = () => {
-    if (currentPagePathname !== pathname) {
-      router.push(pathname);
-    }
-
-    if (hash.length > 0) {
-      const element = document.getElementById(hash);
-
-      if (!element) return;
-
-      window.scrollTo({ behavior: "smooth", top: element.offsetTop - 80 });
-    }
-  };
+export const NavLink: React.FC<Readonly<INavLinkProps>> = (props) => {
+  const { title = "", pathname = "", hash = "", sx } = props;
 
   return (
-    <Box onClick={handleNavigate} sx={{ cursor: "pointer", ...sx }}>
-      <Typography>{title}</Typography>
-    </Box>
+    <Stack sx={{ cursor: "pointer", ...sx }}>
+      <Link href={pathname + hash ? `#${hash}` : ""}>
+        <Typography>{title}</Typography>
+      </Link>
+    </Stack>
   );
 };

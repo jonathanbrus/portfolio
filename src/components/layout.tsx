@@ -1,28 +1,21 @@
-import { Box } from "@mui/material";
+"use client";
+
+import { Stack } from "@mui/material";
 import { AppBar } from "./appbar";
 import { Footer } from "./footer";
 
-export const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return (
-    <Box component="main" sx={styles.main}>
-      <AppBar />
-      <Box sx={styles.child}>{children}</Box>
-      <Footer />
-    </Box>
-  );
-};
+interface IAppLayoutProps {
+  children: React.ReactNode;
+}
 
-const styles = {
-  main: {
-    minHeight: "100vh",
-    minWidth: "100%",
-    display: "flex",
-    flexDirection: "column",
-    background: "black",
-  },
-  child: {
-    display: "flex",
-    flexDirection: "column",
-    flex: 1,
-  },
+export const AppLayout: React.FC<Readonly<IAppLayoutProps>> = (props) => {
+  const { children } = props;
+
+  return (
+    <Stack component="main" sx={{ minHeight: "100vh", minWidth: "100%", background: "black" }}>
+      <AppBar />
+      <Stack sx={{ flex: 1 }}>{children}</Stack>
+      <Footer />
+    </Stack>
+  );
 };

@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import { Stack } from "@mui/material";
 import Container from "@mui/material/Container";
 import MUIAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,37 +8,36 @@ import { NavLink } from "../nav-link";
 
 export const AppBar: React.FC = () => {
   return (
-    <>
+    <Stack>
       <MUIAppBar sx={{ backgroundColor: "black" }}>
         <Toolbar sx={{ px: { xs: 0, sm: 0, md: 0, lg: 0 }, py: { xs: "1rem", sm: "0.6rem" } }}>
           <Container sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Stack direction="row" sx={{ alignItems: "center", gap: "1.5rem" }}>
               <Avatar />
-              <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Stack direction="row" sx={{ alignItems: "center", gap: "0.5rem" }}>
                 <Typography sx={{ fontSize: "1.6rem", fontWeight: "bold" }}>Jonathan</Typography>
-                <Box component="span" sx={{ width: "0.4rem" }}></Box>
                 <Typography sx={{ fontSize: "1.6rem" }}>Brus</Typography>
-              </Box>
-            </Box>
-            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+              </Stack>
+            </Stack>
+            <Stack direction={{ xs: "column", sm: "row" }} sx={{ display: { xs: "none", sm: "flex" } }}>
               {navlinks.map(({ hash, title }) => (
                 <NavLink key={hash} pathname="/" hash={hash} title={title} sx={{ ml: "1.4rem" }} />
               ))}
-            </Box>
+            </Stack>
           </Container>
         </Toolbar>
       </MUIAppBar>
       <Toolbar sx={{ py: { xs: "1rem", sm: "0.6rem" } }} />
-    </>
+    </Stack>
   );
 };
 
-const Avatar = () => {
-  const size = "3rem";
+const Avatar: React.FC = () => {
+  const size = "2.5rem";
   return (
-    <MUIAvatar sx={{ width: size, height: size, mr: "1rem" }}>
-      <Typography variant="h5" sx={{ color: "text.primary" }}>
-        J
+    <MUIAvatar sx={{ width: size, height: size, backgroundColor: "primary.main" }}>
+      <Typography variant="h6" sx={{ color: "text.primary" }}>
+        JB
       </Typography>
     </MUIAvatar>
   );

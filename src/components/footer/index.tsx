@@ -1,11 +1,11 @@
 import React from "react";
-import { Box, Container, Divider, IconButton, Typography } from "@mui/material";
+import { Stack, Box, Container, Divider, IconButton, Typography } from "@mui/material";
 import { NavLink } from "../nav-link";
 import { icons } from "../../icons";
 
-export const Footer: React.FC = (props) => {
+export const Footer: React.FC = () => {
   return (
-    <Box component="div" id="contact" sx={{ backgroundColor: "primary.dark" }}>
+    <Stack component="div" id="contact" sx={{ backgroundColor: "primary.dark" }}>
       <Container
         sx={{
           px: { xs: "1.6rem", sm: "2.6rem" },
@@ -72,7 +72,7 @@ export const Footer: React.FC = (props) => {
           </Typography>
         </Box>
       </Container>
-    </Box>
+    </Stack>
   );
 };
 

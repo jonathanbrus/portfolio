@@ -1,7 +1,10 @@
+import Head from "next/head";
+
 import { Poppins } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "@/theme";
+import { AppLayout } from "@/components/layout";
 import "./global.css";
 
 const poppinsFont = Poppins({
@@ -19,9 +22,17 @@ export default function RootLayout(props: Readonly<IRootLayoutProps>) {
 
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180" />
+      </Head>
+
       <AppRouterCacheProvider>
         <body suppressHydrationWarning={true} className={poppinsFont.variable}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <AppLayout>{children}</AppLayout>
+          </ThemeProvider>
         </body>
       </AppRouterCacheProvider>
     </html>

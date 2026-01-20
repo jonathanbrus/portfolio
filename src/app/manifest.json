@@ -1,0 +1,29 @@
+{
+  "short_name": "JB",
+  "name": "Jonathan Brus Portfolio",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "start_url": ".",
+  "orientation": "portrait",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
