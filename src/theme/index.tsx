@@ -28,13 +28,13 @@ export const theme = createTheme({
       },
     },
 
-    // MuiAvatar: {
-    //   styleOverrides: {
-    //     root: {
-    //       backgroundColor: colourPaletteOptions.primary.,
-    //     },
-    //   },
-    // },
+    MuiAvatar: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          backgroundColor: theme.palette.primary.main,
+        }),
+      },
+    },
 
     MuiButton: {
       defaultProps: {

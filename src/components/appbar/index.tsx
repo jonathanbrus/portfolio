@@ -10,24 +10,27 @@ export const AppBar: React.FC = () => {
   return (
     <Stack>
       <MUIAppBar sx={{ backgroundColor: "black" }}>
-        <Toolbar sx={{ px: { xs: 0, sm: 0, md: 0, lg: 0 }, py: { xs: "1rem", sm: "0.6rem" } }}>
-          <Container sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <Stack direction="row" sx={{ alignItems: "center", gap: "1.5rem" }}>
-              <Avatar />
-              <Stack direction="row" sx={{ alignItems: "center", gap: "0.5rem" }}>
-                <Typography sx={{ fontSize: "1.6rem", fontWeight: "bold" }}>Jonathan</Typography>
-                <Typography sx={{ fontSize: "1.6rem" }}>Brus</Typography>
+        <Toolbar sx={{ px: { xs: 0 } }}>
+          <Container>
+            <Stack direction="row" sx={{ alignItems: "center", justifyContent: "space-between" }}>
+              <Stack direction="row" sx={{ alignItems: "center", gap: "1.5rem" }}>
+                <Avatar />
+
+                <Stack direction="row" sx={{ alignItems: "center", gap: "0.5rem" }}>
+                  <Typography sx={{ fontSize: "1.6rem", fontWeight: "bold" }}>Jonathan</Typography>
+                  <Typography sx={{ fontSize: "1.6rem" }}>Brus</Typography>
+                </Stack>
               </Stack>
-            </Stack>
-            <Stack direction={{ xs: "column", sm: "row" }} sx={{ display: { xs: "none", sm: "flex" } }}>
-              {navlinks.map(({ hash, title }) => (
-                <NavLink key={hash} pathname="/" hash={hash} title={title} sx={{ ml: "1.4rem" }} />
-              ))}
+              <Stack direction={{ xs: "column", sm: "row" }} sx={{ display: { xs: "none", sm: "flex" } }}>
+                {navlinks.map(({ hash, title }) => (
+                  <NavLink key={hash} pathname="/" hash={hash} title={title} sx={{ ml: "1.4rem" }} />
+                ))}
+              </Stack>
             </Stack>
           </Container>
         </Toolbar>
       </MUIAppBar>
-      <Toolbar sx={{ py: { xs: "1rem", sm: "0.6rem" } }} />
+      <Toolbar />
     </Stack>
   );
 };

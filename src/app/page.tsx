@@ -1,4 +1,4 @@
-import { HomePage } from "@/presentations/home";
+import { HomePage } from "@/presentations/home-landing";
 
 export const metadata = {
   title: "Jonathan Brus",

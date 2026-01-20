@@ -1,3 +1,4 @@
+import React from "react";
 import { Typography, Container, Stack } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -8,7 +9,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { jobExperiences } from "../../../_data/experiences";
 
-export const Works: React.FC = () => {
+export const Works: React.FC = React.memo(function Works() {
   return (
     <Stack component="div" id="works">
       <Container
@@ -28,9 +29,9 @@ export const Works: React.FC = () => {
       </Container>
     </Stack>
   );
-};
+});
 
-const JobExperiences: React.FC = () => {
+export const JobExperiences: React.FC = React.memo(function JobExperiences() {
   return (
     <Stack>
       <Timeline position="alternate">
@@ -65,4 +66,4 @@ const JobExperiences: React.FC = () => {
       </Timeline>
     </Stack>
   );
-};
+});

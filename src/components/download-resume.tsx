@@ -1,13 +1,14 @@
+import React from "react";
 import { Button } from "@mui/material";
 
-export const DownloadResume: React.FC = () => {
+export const DownloadResume: React.FC = React.memo(function DownloadResume() {
   return (
     <Button
       sx={{
-        padding: "0.36rem 1rem 0.26rem 1rem",
+        padding: "0.25rem 1rem",
         border: 1,
-        borderWidth: "2px",
         borderRadius: "3rem",
+        borderWidth: "2px",
         borderColor: "transparent",
         ":hover": {
           borderColor: "primary.light",
@@ -20,4 +21,4 @@ export const DownloadResume: React.FC = () => {
       download my resume
     </Button>
   );
-};
+});
