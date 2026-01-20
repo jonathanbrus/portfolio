@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 
-export const useIntersection = (margin: string, threshold: number) => {
+export const useIntersection = (initial: { margin: string; threshold: number }) => {
+  const { margin, threshold } = initial;
+
   const [isOnScreen, setIsOnScreen] = useState(false);
   const containerRef = useRef(null);
 
