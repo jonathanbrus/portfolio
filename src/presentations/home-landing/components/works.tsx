@@ -7,9 +7,9 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import { jobExperiences } from "../../../_data/experiences";
+import { jobExperiences } from "@/core/_data/experiences";
 
-export const Works: React.FC = React.memo(function Works() {
+export const Works: React.FC = React.memo(() => {
   return (
     <Stack component="div" id="works">
       <Container
@@ -31,7 +31,7 @@ export const Works: React.FC = React.memo(function Works() {
   );
 });
 
-export const JobExperiences: React.FC = React.memo(function JobExperiences() {
+export const JobExperiences: React.FC = React.memo(() => {
   return (
     <Stack>
       <Timeline position="alternate">

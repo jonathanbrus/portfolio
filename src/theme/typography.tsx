@@ -1,6 +1,6 @@
-import { Palette, TypographyVariantsOptions } from "@mui/material/styles";
+import { TypographyVariantsOptions } from "@mui/material/styles";
 
-export const typographyOptions = (palette: Palette): TypographyVariantsOptions => ({
+export const typographyOptions = (): TypographyVariantsOptions => ({
   allVariants: {
     fontStyle: "normal",
     fontFamily: "Poppins",

@@ -13,11 +13,16 @@ export const useIntersection = (margin: string, threshold: number) => {
       { rootMargin: margin, threshold: threshold },
     );
 
-    let current = containerRef.current;
+    const current = containerRef.current;
 
-    current && observer.observe(current);
+    if (current) {
+      observer.observe(current);
+    }
+
     return () => {
-      current && observer.unobserve(current);
+      if (current) {
+        observer.unobserve(current);
+      }
     };
   }, [margin, threshold]);
 

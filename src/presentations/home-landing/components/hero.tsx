@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Container, Typography } from "@mui/material";
 
-export const HeroSection: React.FC = React.memo(function HeroSection() {
+export const HeroSection: React.FC = React.memo(() => {
   return (
     <Container sx={{ color: "white" }}>
       <Stack sx={{ minHeight: "68vh", justifyContent: "center", alignItems: "flex-start" }}>

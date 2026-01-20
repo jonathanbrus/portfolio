@@ -1,5 +1,5 @@
-import { SxProps, Stack, Typography } from "@mui/material";
 import Link from "next/link";
+import { SxProps, Stack, Typography } from "@mui/material";
 
 interface INavLinkProps {
   title: string;

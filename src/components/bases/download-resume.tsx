@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-export const DownloadResume: React.FC = React.memo(function DownloadResume() {
+export const DownloadResume: React.FC = React.memo(() => {
   return (
     <Button
       sx={{

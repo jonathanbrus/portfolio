@@ -1,8 +1,8 @@
 import React from "react";
 import { Stack, Container, Typography } from "@mui/material";
-import { DownloadResume } from "../../../components/download-resume";
+import { DownloadResume } from "@/components/bases/download-resume";
 
-export const About: React.FC = React.memo(function About() {
+export const About: React.FC = React.memo(() => {
   return (
     <Stack sx={{ backgroundColor: "primary.dark" }}>
       <Container component="div" id="about" sx={{ marginY: "3rem", color: "white" }}>

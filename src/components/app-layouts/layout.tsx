@@ -1,8 +1,8 @@
 "use client";
 
 import { Stack } from "@mui/material";
-import { AppBar } from "./appbar";
-import { Footer } from "./footer";
+import { AppBar } from "../app-sections/appbar";
+import { Footer } from "../app-sections/footer";
 
 interface IAppLayoutProps {
   children: React.ReactNode;

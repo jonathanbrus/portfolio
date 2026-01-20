@@ -1,10 +1,5 @@
-import { Stack } from "@mui/material";
-import Container from "@mui/material/Container";
-import MUIAppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import MUIAvatar from "@mui/material/Avatar";
-import { NavLink } from "../nav-link";
+import { Stack, Container, AppBar as MUIAppBar, Toolbar, Avatar as MUIAvatar, Typography } from "@mui/material";
+import { NavLink } from "../../bases/nav-link";
 
 export const AppBar: React.FC = () => {
   return (

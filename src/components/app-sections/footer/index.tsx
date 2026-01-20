@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Container, Divider, IconButton, Typography } from "@mui/material";
-import { NavLink } from "../nav-link";
+import { NavLink } from "../../bases/nav-link";
 import { icons } from "../../icons";
 
 export const Footer: React.FC = () => {
@@ -91,5 +91,3 @@ const navlinks = [
   { hash: "skills", title: "Skills" },
   { hash: "works", title: "Works" },
 ];
-
-export default Footer;

@@ -1,5 +1,5 @@
 "use client";
 
-export const ProjectDetailsPage: React.FC = (props) => {
+export const ProjectDetailsPage: React.FC = () => {
   return null;
 };

@@ -1,5 +1,5 @@
 import { Stack, Container, Grid, Typography } from "@mui/material";
-import { skills } from "../../../_data/skills";
+import { skills } from "@/core/_data/skills";
 
 export const Skills: React.FC = () => {
   return (
