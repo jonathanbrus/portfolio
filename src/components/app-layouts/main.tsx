@@ -4,11 +4,11 @@ import { Stack } from "@mui/material";
 import { AppBar } from "../app-sections/appbar";
 import { Footer } from "../app-sections/footer";
 
-interface IAppLayoutProps {
+interface IMainLayoutProps {
   children: React.ReactNode;
 }
 
-export const AppLayout: React.FC<Readonly<IAppLayoutProps>> = (props) => {
+export const MainLayout: React.FC<Readonly<IMainLayoutProps>> = (props) => {
   const { children } = props;
 
   return (

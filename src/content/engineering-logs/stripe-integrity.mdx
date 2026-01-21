@@ -1,0 +1,29 @@
+---
+title: "Zero-Fail Transactions: Hardening Payment Workflows"
+date: "2026-01-05"
+category: "Backend"
+roi: "Eliminated manual financial reconciliation; 100% payment accuracy"
+---
+
+# Zero-Fail Transactions: Hardening Payment Workflows
+
+## Situation
+
+Occasional webhook delivery failures from **Stripe** caused a mismatch between payment status and user access rights. In a survivalist mindset, a missed transaction is a failed system.
+
+## Task
+
+Ensure 100% idempotency and reliability in the payment processing pipeline.
+
+## Action
+
+Implemented a robust event-processing layer using **Nest.js** and **Redis**.
+
+- **Idempotency Layer**: Used Redis to cache Stripe event IDs, preventing duplicate processing of the same webhook.
+- **Retry Logic**: Developed a worker service that automatically retries failed database writes with exponential backoff.
+- **Logging**: Implemented comprehensive audit trails in **MongoDB** for every transactional state change.
+
+## Result
+
+- **System Autonomy**: The system now self-heals during 3rd-party API outages.
+- **Efficiency**: Zero manual intervention required for payment support tickets over the last 90 days.

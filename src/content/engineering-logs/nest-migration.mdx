@@ -1,0 +1,35 @@
+---
+title: "Standardizing Backend Architecture: The Move to Nest.js"
+date: "2026-01-15"
+category: "Architecture"
+roi: "40% reduction in onboarding time; 100% architectural consistency"
+---
+
+# Standardizing Backend Architecture: The Move to Nest.js
+
+## Situation
+
+Managing multiple microservices in a high-growth startup environment led to "architectural drift". Every developer had a different pattern for Express.js controllers, making code reviews expensive and error-prone.
+
+## Task
+
+Implement a framework that enforces strict modularity and dependency injection to ensure the codebase remains **team-ready** and **scalable**.
+
+## Action
+
+I transitioned our core services to **Nest.js**.
+
+- **Modular Design**: Encapsulated business logic into discrete modules.
+- **Dependency Injection**: Decoupled services to make the system easier to test with **Jest**.
+- **DTO Validation**: Leveraged class-validator to ensure data integrity before it reaches the **MongoDB** layer.
+
+## Result
+
+- **Autonomy**: New engineers contribute to production within 48 hours without architectural hand-holding.
+- **Reliability**: Reduced runtime errors by 25% through strict TypeScript enforcement.
+
+| Metric          | Express.js | Nest.js      |
+| :-------------- | :--------- | :----------- |
+| **Scalability** | Low        | **High**     |
+| **Maintenance** | Medium     | **Low**      |
+| **ROI**         | Neutral    | **Positive** |

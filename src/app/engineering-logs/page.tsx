@@ -1,10 +1,13 @@
-import { HomePage } from "@/presentations/home-landing";
+import { getAllSlugs } from "@/core/helpers/get-all-slugs";
+import { EngineeringLogsPage } from "@/presentations/engineering-logs";
 
 export const metadata = {
-  title: "Jonathan Brus",
-  description: "Portfolio website of Jonathan Brus",
+  title: "The Engineering Ledger | Jonathan Brus",
+  description: "A tactical record of architectural decisions and system post-mortems.",
 };
 
 export default function Page() {
-  return <HomePage />;
+  const logs = getAllSlugs();
+
+  return <EngineeringLogsPage logs={logs} />;
 }

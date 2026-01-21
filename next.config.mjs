@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+import createMDX from "@next/mdx";
+
 const requiredEnvVars = [];
 
 if (requiredEnvVars.length > 0) {
@@ -9,10 +10,23 @@ if (requiredEnvVars.length > 0) {
   }
 }
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
   env: {},
+
+  pageExtensions: ["mdx", "ts", "tsx"],
+
+  experimental: {
+    mdxRs: false,
+  },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-gfm", ["remark-toc", { heading: "The Table" }]],
+  },
+});
+
+export default withMDX(nextConfig);

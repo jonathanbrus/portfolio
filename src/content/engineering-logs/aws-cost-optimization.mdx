@@ -1,0 +1,29 @@
+---
+title: "Financial Engineering: Reducing Cloud Overhead by 30%"
+date: "2026-01-10"
+category: "Infrastructure"
+roi: "Direct capital preservation; $1,200 monthly savings"
+---
+
+# Financial Engineering: Reducing Cloud Overhead by 30%
+
+## Situation
+
+Unmanaged AWS resource allocation was creating "financial leakages." Manual provisioning resulted in orphaned volumes and over-provisioned RDS instances.
+
+## Task
+
+Apply a **survivalist approach** to infrastructure—treat every AWS dollar as a transaction that must be optimized.
+
+## Action
+
+I refactored our cloud footprint using **Terraform** for Infrastructure as Code (IaC).
+
+- **Automated Shutdowns**: Scripted non-production environments to terminate outside 9-6 working hours.
+- **Right-Sizing**: Utilized CloudWatch metrics to downgrade underutilized EC2 and RDS instances.
+- **Containerization**: Shifted sporadic workloads to **Docker** on AWS Fargate to pay only for exact execution time.
+
+## Result
+
+- **Debt Reduction**: Immediate reduction in monthly burn rate, redirecting $14k+ annually back to capital reserves.
+- **Environment Parity**: 100% consistency across Dev, Staging, and Prod.

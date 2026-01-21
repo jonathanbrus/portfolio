@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "@/theme";
-import { AppLayout } from "@/components/app-layouts/layout";
+import { MainLayout } from "@/components/app-layouts/main";
 import "./global.css";
 
 const poppinsFont = Poppins({
@@ -31,7 +31,7 @@ export default function RootLayout(props: Readonly<IRootLayoutProps>) {
       <AppRouterCacheProvider>
         <body suppressHydrationWarning={true} className={poppinsFont.variable}>
           <ThemeProvider theme={theme}>
-            <AppLayout>{children}</AppLayout>
+            <MainLayout>{children}</MainLayout>
           </ThemeProvider>
         </body>
       </AppRouterCacheProvider>
