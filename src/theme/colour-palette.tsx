@@ -1,58 +1,51 @@
 import { PaletteOptions } from "@mui/material";
 
-export const colourPaletteOptions: PaletteOptions = {
-  mode: "dark",
-
+export const lightPalette: PaletteOptions = {
+  mode: "light",
   background: {
-    default: "#000000",
-    paper: "#424242",
+    default: "#fbfbfe", // User Background
+    paper: "#FFFFFF",
   },
-
   text: {
-    primary: "#ffffff",
+    primary: "#050315", // User Text
+    secondary: "#2b2b35", // Derived softer text
   },
-
   primary: {
-    main: "#5221e6",
-    light: "#744deb",
-    dark: "#3917A1",
+    main: "#693efe", // Rich Purple (1st Color)
+    light: "#f0afff", // Pastel Pink (2nd Color)
+    dark: "#2a00c6",
     contrastText: "#ffffff",
   },
-
   secondary: {
-    main: "#181823",
-    light: "#46464F",
-    dark: "#101018",
+    main: "#3fbea7", // Teal (3rd Color)
+    light: "#76f1d8",
+    dark: "#008d78",
+    contrastText: "#000000",
+  },
+  divider: "rgba(105, 62, 254, 0.08)", // Tinted purple divider
+};
+
+export const darkPalette: PaletteOptions = {
+  mode: "dark",
+  background: {
+    default: "#1e1926", // Deep Purple-Black (4th Color)
+    paper: "#2a2438", // Lighter tinted paper
+  },
+  text: {
+    primary: "#fbfbfe", // Keep clean white text
+    secondary: "#dedcff", // Keep soft purple-tinted secondary text
+  },
+  primary: {
+    main: "#693efe", // Rich Purple
+    light: "#f0afff", // Pastel Pink
+    dark: "#2a00c6",
     contrastText: "#ffffff",
   },
-
-  info: {
-    main: "#2196f3",
-    light: "#64b5f6",
-    dark: "#1976d2",
-    contrastText: "#ffffff",
+  secondary: {
+    main: "#3fbea7", // Teal
+    light: "#76f1d8",
+    dark: "#008d78",
+    contrastText: "#000000",
   },
-
-  success: {
-    main: "#4caf50",
-    light: "#81c784",
-    dark: "#388e3c",
-    contrastText: "#000000de",
-  },
-
-  warning: {
-    main: "#ff9800",
-    light: "#ffb74d",
-    dark: "#f57c00",
-    contrastText: "#000000de",
-  },
-
-  error: {
-    main: "#f44336",
-    light: "#e57373",
-    dark: "#d32f2f",
-    contrastText: "#ffffff",
-  },
-
-  divider: "#ffffff1f",
+  divider: "rgba(240, 175, 255, 0.12)", // Tinted pink divider
 };

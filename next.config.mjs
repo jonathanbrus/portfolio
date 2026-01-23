@@ -13,6 +13,7 @@ if (requiredEnvVars.length > 0) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ['developer-icons'],
 
   env: {},
 

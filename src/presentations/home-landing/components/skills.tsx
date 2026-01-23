@@ -1,10 +1,13 @@
-import { Stack, Container, Grid, Typography } from "@mui/material";
+import { Stack, Container, Grid, Typography, useTheme } from "@mui/material";
 import { skills } from "@/core/_data/skills";
 
 export const Skills: React.FC = () => {
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
+
   return (
     <Container component="div" id="skills">
-      <Stack sx={{ marginY: "3rem", color: "white" }}>
+      <Stack sx={{ marginY: "3rem", color: "text.primary" }}>
         <Typography sx={{ fontSize: { xs: "4rem", sm: "2.6rem" }, fontWeight: "bold" }}>
           What I'm Familiar With.
         </Typography>
@@ -16,7 +19,7 @@ export const Skills: React.FC = () => {
           sx={{ marginTop: { xs: "0.8rem", sm: "1.6rem" } }}
         >
           {skills.map((skill) => {
-            const { Icon } = skill;
+            const Icon = isDarkMode && skill.DarkIcon ? skill.DarkIcon : skill.Icon;
 
             return (
               <Grid
@@ -31,12 +34,11 @@ export const Skills: React.FC = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     border: "4px solid",
-                    borderColor: "primary.dark",
+                    borderColor: "primary.main",
                     borderRadius: "36%",
                     transition: "all ease-in 300ms",
                     "&:hover": {
-                      borderColor: "primary.light",
-                      backgroundColor: "primary.dark",
+                      backgroundColor: "primary.light",
                     },
                   }}
                 >

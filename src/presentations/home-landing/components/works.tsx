@@ -11,14 +11,14 @@ import { jobExperiences } from "@/core/_data/experiences";
 
 export const Works: React.FC = React.memo(() => {
   return (
-    <Stack component="div" id="works">
+    <Stack component="div" id="works" sx={{ backgroundColor: "background.paper" }}>
       <Container
         sx={{
           px: { xs: "1.6rem", sm: "2.6rem" },
           pb: "3rem",
           display: "flex",
           flexDirection: "column",
-          color: "white",
+          color: "text.primary",
         }}
       >
         <Typography sx={{ my: "0.3rem", fontSize: { xs: "2.2rem", sm: "2.6rem" }, fontWeight: "bold" }}>
@@ -39,21 +39,24 @@ export const JobExperiences: React.FC = React.memo(() => {
           return (
             <TimelineItem key={experience.duration} sx={{ "::before": { content: "none" } }}>
               <TimelineOppositeContent>
-                <Typography {...(i === 0 && { color: "primary.light" })} variant="caption">
-                  {experience.duration}
-                </Typography>
+                <Typography variant="caption">{experience.duration}</Typography>
               </TimelineOppositeContent>
 
               <TimelineSeparator>
-                <TimelineDot {...(i === 0 && { color: "primary" })} />
+                <TimelineDot color={i === 0 ? "secondary" : "primary"} />
                 <TimelineConnector />
               </TimelineSeparator>
 
               <TimelineContent sx={{ my: "1.3rem" }}>
-                <Typography sx={{ fontSize: { xs: "1.4rem", sm: "1.8rem", md: "2.2rem" }, fontWeight: "bold" }}>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.4rem", sm: "1.8rem", md: "2.2rem" },
+                    fontWeight: "bold",
+                  }}
+                >
                   {experience.company}
                 </Typography>
-                <Typography variant="subtitle2" sx={{ color: "grey", my: "0.2rem" }}>
+                <Typography variant="subtitle2" sx={{ color: "text.secondary", my: "0.2rem" }}>
                   {experience.designation}
                 </Typography>
                 <Typography variant="body1" sx={{ mt: "1rem" }}>
