@@ -39,9 +39,7 @@ export const JobExperiences: React.FC = React.memo(() => {
           return (
             <TimelineItem key={experience.duration} sx={{ "::before": { content: "none" } }}>
               <TimelineOppositeContent>
-                <Typography variant="caption">
-                  {experience.duration}
-                </Typography>
+                <Typography variant="caption">{experience.duration}</Typography>
               </TimelineOppositeContent>
 
               <TimelineSeparator>

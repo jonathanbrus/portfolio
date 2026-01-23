@@ -26,7 +26,7 @@ export const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       },
       mode,
     }),
-    [mode]
+    [mode],
   );
 
   const theme = useMemo(() => getTheme(mode), [mode]);
