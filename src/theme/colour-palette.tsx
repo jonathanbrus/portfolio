@@ -1,58 +1,52 @@
 import { PaletteOptions } from "@mui/material";
 
-export const colourPaletteOptions: PaletteOptions = {
-  mode: "dark",
-
+export const lightPalette: PaletteOptions = {
+  mode: "light",
   background: {
-    default: "#000000",
-    paper: "#424242",
+    default: "#f5f5f5",
+    paper: "#ffffff",
   },
-
   text: {
-    primary: "#ffffff",
+    primary: "#181823",
+    secondary: "#46464F",
   },
-
   primary: {
     main: "#5221e6",
     light: "#744deb",
     dark: "#3917A1",
     contrastText: "#ffffff",
   },
-
   secondary: {
     main: "#181823",
     light: "#46464F",
     dark: "#101018",
     contrastText: "#ffffff",
   },
+  // ... other palettes remain similar or default for now
+  divider: "rgba(0, 0, 0, 0.12)",
+};
 
-  info: {
-    main: "#2196f3",
-    light: "#64b5f6",
-    dark: "#1976d2",
+export const darkPalette: PaletteOptions = {
+  mode: "dark",
+  background: {
+    default: "#000000",
+    paper: "#424242",
+  },
+  text: {
+    primary: "#ffffff",
+    secondary: "rgba(255, 255, 255, 0.7)",
+  },
+  primary: {
+    main: "#5221e6",
+    light: "#744deb",
+    dark: "#3917A1",
     contrastText: "#ffffff",
   },
-
-  success: {
-    main: "#4caf50",
-    light: "#81c784",
-    dark: "#388e3c",
-    contrastText: "#000000de",
+  secondary: {
+    main: "#ffffff", // In dark mode, secondary usually contrasts well
+    light: "#f5f5f5",
+    dark: "#cccccc",
+    contrastText: "#000000",
   },
-
-  warning: {
-    main: "#ff9800",
-    light: "#ffb74d",
-    dark: "#f57c00",
-    contrastText: "#000000de",
-  },
-
-  error: {
-    main: "#f44336",
-    light: "#e57373",
-    dark: "#d32f2f",
-    contrastText: "#ffffff",
-  },
-
-  divider: "#ffffff1f",
+  divider: "rgba(255, 255, 255, 0.12)",
 };

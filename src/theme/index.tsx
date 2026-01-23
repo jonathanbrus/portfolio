@@ -1,139 +1,141 @@
 "use client";
 
-import { createTheme } from "@mui/material/styles";
-import { colourPaletteOptions } from "./colour-palette";
+import { createTheme, PaletteMode } from "@mui/material";
+import { darkPalette, lightPalette } from "./colour-palette";
 import { typographyOptions } from "./typography";
 
-export const theme = createTheme({
-  spacing: 16,
+export const getTheme = (mode: PaletteMode) => {
+  return createTheme({
+    spacing: 16,
 
-  palette: colourPaletteOptions,
+    palette: mode === "light" ? lightPalette : darkPalette,
 
-  typography: typographyOptions,
+    typography: typographyOptions,
 
-  shape: {
-    borderRadius: 4,
-  },
-
-  components: {
-    MuiAppBar: {
-      defaultProps: {
-        elevation: 0,
-      },
+    shape: {
+      borderRadius: 4,
     },
 
-    MuiContainer: {
-      defaultProps: {
-        maxWidth: "xl",
+    components: {
+      MuiAppBar: {
+        defaultProps: {
+          elevation: 0,
+        },
       },
-    },
 
-    MuiAvatar: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          backgroundColor: theme.palette.primary.main,
-        }),
+      MuiContainer: {
+        defaultProps: {
+          maxWidth: "xl",
+        },
       },
-    },
 
-    MuiButton: {
-      defaultProps: {
-        variant: "contained",
-        color: "primary",
-        size: "small",
+      MuiAvatar: {
+        styleOverrides: {
+          root: ({ theme }) => ({
+            backgroundColor: theme.palette.primary.main,
+          }),
+        },
       },
-    },
 
-    MuiList: {
-      defaultProps: {
-        dense: true,
+      MuiButton: {
+        defaultProps: {
+          variant: "contained",
+          color: "primary",
+          size: "small",
+        },
       },
-    },
 
-    MuiMenuItem: {
-      defaultProps: {
-        dense: true,
+      MuiList: {
+        defaultProps: {
+          dense: true,
+        },
       },
-    },
 
-    MuiTable: {
-      defaultProps: {
-        size: "small",
+      MuiMenuItem: {
+        defaultProps: {
+          dense: true,
+        },
       },
-    },
 
-    MuiButtonGroup: {
-      defaultProps: {
-        size: "small",
+      MuiTable: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiCheckbox: {
-      defaultProps: {
-        size: "small",
+      MuiButtonGroup: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiFab: {
-      defaultProps: {
-        size: "small",
+      MuiCheckbox: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiFormControl: {
-      defaultProps: {
-        margin: "dense",
-        size: "small",
+      MuiFab: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiFormHelperText: {
-      defaultProps: {
-        margin: "dense",
+      MuiFormControl: {
+        defaultProps: {
+          margin: "dense",
+          size: "small",
+        },
       },
-    },
 
-    MuiIconButton: {
-      defaultProps: {
-        size: "small",
+      MuiFormHelperText: {
+        defaultProps: {
+          margin: "dense",
+        },
       },
-    },
 
-    MuiInputBase: {
-      defaultProps: {
-        margin: "dense",
+      MuiIconButton: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiInputLabel: {
-      defaultProps: {
-        margin: "dense",
+      MuiInputBase: {
+        defaultProps: {
+          margin: "dense",
+        },
       },
-    },
 
-    MuiRadio: {
-      defaultProps: {
-        size: "small",
+      MuiInputLabel: {
+        defaultProps: {
+          margin: "dense",
+        },
       },
-    },
 
-    MuiSwitch: {
-      defaultProps: {
-        size: "small",
+      MuiRadio: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiTextField: {
-      defaultProps: {
-        margin: "dense",
-        size: "small",
+      MuiSwitch: {
+        defaultProps: {
+          size: "small",
+        },
       },
-    },
 
-    MuiTooltip: {
-      defaultProps: {
-        arrow: true,
+      MuiTextField: {
+        defaultProps: {
+          margin: "dense",
+          size: "small",
+        },
+      },
+
+      MuiTooltip: {
+        defaultProps: {
+          arrow: true,
+        },
       },
     },
-  },
-});
+  });
+};
