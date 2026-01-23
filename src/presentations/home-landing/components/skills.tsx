@@ -4,7 +4,7 @@ import { skills } from "@/core/_data/skills";
 export const Skills: React.FC = () => {
   return (
     <Container component="div" id="skills">
-      <Stack sx={{ marginY: "3rem", color: "white" }}>
+      <Stack sx={{ marginY: "3rem", color: "text.primary" }}>
         <Typography sx={{ fontSize: { xs: "4rem", sm: "2.6rem" }, fontWeight: "bold" }}>
           What I'm Familiar With.
         </Typography>
@@ -35,8 +35,8 @@ export const Skills: React.FC = () => {
                     borderRadius: "36%",
                     transition: "all ease-in 300ms",
                     "&:hover": {
-                      borderColor: "primary.light",
-                      backgroundColor: "primary.dark",
+                      borderColor: "secondary.main",
+                      backgroundColor: "secondary.light",
                     },
                   }}
                 >

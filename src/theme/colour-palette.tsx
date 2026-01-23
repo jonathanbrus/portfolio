@@ -3,50 +3,49 @@ import { PaletteOptions } from "@mui/material";
 export const lightPalette: PaletteOptions = {
   mode: "light",
   background: {
-    default: "#f5f5f5",
-    paper: "#ffffff",
+    default: "#fbfbfe", // User Background
+    paper: "#FFFFFF",
   },
   text: {
-    primary: "#181823",
-    secondary: "#46464F",
+    primary: "#050315", // User Text
+    secondary: "#2b2b35", // Derived softer text
   },
   primary: {
-    main: "#5221e6",
-    light: "#744deb",
-    dark: "#3917A1",
+    main: "#693efe", // Rich Purple (1st Color)
+    light: "#f0afff", // Pastel Pink (2nd Color)
+    dark: "#2a00c6",
     contrastText: "#ffffff",
   },
   secondary: {
-    main: "#181823",
-    light: "#46464F",
-    dark: "#101018",
-    contrastText: "#ffffff",
+    main: "#3fbea7", // Teal (3rd Color)
+    light: "#76f1d8",
+    dark: "#008d78",
+    contrastText: "#000000",
   },
-  // ... other palettes remain similar or default for now
-  divider: "rgba(0, 0, 0, 0.12)",
+  divider: "rgba(105, 62, 254, 0.08)", // Tinted purple divider
 };
 
 export const darkPalette: PaletteOptions = {
   mode: "dark",
   background: {
-    default: "#000000",
-    paper: "#424242",
+    default: "#1e1926", // Deep Purple-Black (4th Color)
+    paper: "#2a2438", // Lighter tinted paper
   },
   text: {
-    primary: "#ffffff",
-    secondary: "rgba(255, 255, 255, 0.7)",
+    primary: "#fbfbfe", // Keep clean white text
+    secondary: "#dedcff", // Keep soft purple-tinted secondary text
   },
   primary: {
-    main: "#5221e6",
-    light: "#744deb",
-    dark: "#3917A1",
+    main: "#693efe", // Rich Purple
+    light: "#f0afff", // Pastel Pink
+    dark: "#2a00c6",
     contrastText: "#ffffff",
   },
   secondary: {
-    main: "#ffffff", // In dark mode, secondary usually contrasts well
-    light: "#f5f5f5",
-    dark: "#cccccc",
+    main: "#3fbea7", // Teal
+    light: "#76f1d8",
+    dark: "#008d78",
     contrastText: "#000000",
   },
-  divider: "rgba(255, 255, 255, 0.12)",
+  divider: "rgba(240, 175, 255, 0.12)", // Tinted pink divider
 };

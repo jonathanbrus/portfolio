@@ -4,8 +4,8 @@ import { DownloadResume } from "@/components/bases/download-resume";
 
 export const About: React.FC = React.memo(() => {
   return (
-    <Stack sx={{ backgroundColor: "primary.dark" }}>
-      <Container component="div" id="about" sx={{ marginY: "3rem", color: "white" }}>
+    <Stack sx={{ backgroundColor: "background.paper" }}>
+      <Container component="div" id="about" sx={{ marginY: "3rem", color: "text.primary" }}>
         <Stack direction={{ xs: "column", md: "row" }} sx={{ minHeight: "60vh", alignItems: "center" }}>
           <Stack sx={{ flex: 1, alignItems: "center", justifyContent: { xs: "center", md: "flex-start" } }}>
             <Stack
@@ -18,7 +18,7 @@ export const About: React.FC = React.memo(() => {
           <Stack sx={{ flex: 1.5, gap: "1rem" }}>
             <Stack sx={{ gap: "1rem" }}>
               <Stack>
-                <Typography variant="subtitle1" sx={{ color: "#CCCCCC", textTransform: "uppercase" }}>
+                <Typography variant="subtitle1" sx={{ color: "primary.main", textTransform: "uppercase" }}>
                   who is jonathan brus
                 </Typography>
                 <Typography sx={{ fontSize: { xs: "2.2rem", sm: "2.8rem" }, fontWeight: "bold" }}>

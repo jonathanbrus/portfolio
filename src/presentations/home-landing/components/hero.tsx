@@ -3,17 +3,18 @@ import { Stack, Container, Typography } from "@mui/material";
 
 export const HeroSection: React.FC = React.memo(() => {
   return (
-    <Container sx={{ color: "white" }}>
+    <Container sx={{ color: "text.primary" }}>
       <Stack sx={{ minHeight: "68vh", justifyContent: "center", alignItems: "flex-start" }}>
         <Typography
           sx={{
             width: { xs: "100%", md: "66%" },
             fontSize: { xs: "2.3rem", sm: "3rem", md: "3.6rem" },
             fontWeight: "bolder",
+            color: "primary.main",
           }}
         >
           Building digital products, brands{" "}
-          <Stack component="span" sx={{ display: "inline-flex", color: "primary.light" }}>
+          <Stack component="span" sx={{ display: "inline-flex", color: "secondary.main" }}>
             & experience.
           </Stack>
         </Typography>

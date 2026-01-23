@@ -5,19 +5,18 @@ import { icons } from "../../icons";
 
 export const Footer: React.FC = () => {
   return (
-    <Stack component="div" id="contact" sx={{ backgroundColor: "primary.dark" }}>
+    <Stack component="div" id="contact" sx={{ backgroundColor: "background.default", color: "text.primary" }}>
       <Container
         sx={{
           px: { xs: "1.6rem", sm: "2.6rem" },
           py: "3rem",
           display: "flex",
           flexDirection: "column",
-          color: "white",
         }}
       >
         <Stack direction={{ xs: "column", sm: "row" }}>
           <Stack sx={{ flex: 1, gap: "0.5rem" }}>
-            <Typography variant="subtitle1">Full-Stack Developer</Typography>
+            <Typography variant="subtitle1" sx={{ color: "primary.main" }}>Full-Stack Developer</Typography>
             <Stack direction="row" sx={{ alignItems: "center", gap: "0.5rem" }}>
               <Typography sx={{ fontSize: { xs: "2.2rem", sm: "2.6rem" }, fontWeight: "bold" }}>Jonathan</Typography>
               <Typography sx={{ fontSize: { xs: "2.2rem", sm: "2.6rem" } }}>Brus</Typography>
@@ -25,7 +24,7 @@ export const Footer: React.FC = () => {
 
             <Stack direction="row" sx={{ marginLeft: "-0.5rem" }}>
               {socials.map(({ icon, link }) => (
-                <IconButton key={link} onClick={() => window.open(link)} sx={{ p: "1rem" }}>
+                <IconButton key={link} onClick={() => window.open(link)} sx={{ p: "1rem", color: "secondary.main" }}>
                   {icon}
                 </IconButton>
               ))}
@@ -34,7 +33,7 @@ export const Footer: React.FC = () => {
 
           <Stack sx={{ flex: 1.5, gap: "2rem" }}>
             <Stack>
-              <Typography sx={{ fontSize: { xs: "2.2rem", sm: "2.6rem" }, fontWeight: "bold" }}>Let's Talk!</Typography>
+              <Typography sx={{ fontSize: { xs: "2.2rem", sm: "2.6rem" }, fontWeight: "bold", color: "primary.main" }}>Let's Talk!</Typography>
               <Typography variant="body1">I am always open to discuss your project, Start saying Hi!</Typography>
             </Stack>
 
@@ -55,7 +54,7 @@ export const Footer: React.FC = () => {
           </Stack>
         </Stack>
 
-        <Divider sx={{ backgroundColor: "whitesmoke", my: "3rem" }} />
+        <Divider sx={{ backgroundColor: "divider", my: "3rem" }} />
 
         <Stack
           direction="row"
